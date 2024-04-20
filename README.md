@@ -27,8 +27,6 @@ npm install exrest
 
 Here's a basic example of how to use ExRest to create a simple API:
 
-javascriptCopy code
-
 ```js
 const express = require('express');
 const generateAPI = require('exrest');
@@ -71,7 +69,4 @@ Contributions are welcome! If you encounter any bugs, have feature requests, or 
 ExRest is licensed under the MIT License.
 
 ---
-
-Feel free to customize this README template further to suit your specific project needs and preferences.
-
 
