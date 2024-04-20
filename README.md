@@ -58,7 +58,7 @@ app.listen(3000, () => {
 
 ## Documentation
 
-For comprehensive documentation, including detailed usage instructions, API reference, and examples, please visit the [ExRest Documentation](https://github.com/your-username/exresthttps://github.com/your-username/exrest).
+For comprehensive documentation, including detailed usage instructions, API reference, and examples, please visit the [ExRest Documentation](https://exrest.vercel.app/).
 
 ## Contributing
 
