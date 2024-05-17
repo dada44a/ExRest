@@ -68,3 +68,25 @@ Contributions are welcome! If you encounter any bugs, have feature requests, or 
 ExRest is licensed under the MIT License.
 
 
+### 1.0.2 Update
+- it is not a big update, its just a small update in which a request limiter middleware was added
+```javascript
+    app.use(limitRequests);
+
+    app.get('/', (req, res) => {
+        res.send('Hello world');
+    });
+
+    app.get('/api/quotes', (req, res) => {
+        // Simulate a delay to mimic real-world processing time
+        setTimeout(() => {
+            res.json({ quotes: ['Quote 1', 'Quote 2', 'Quote 3'] });
+        }, 1000);
+    });
+
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
+
+
+```
