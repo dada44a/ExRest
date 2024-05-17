@@ -1,5 +1,4 @@
-// api-generator.js
-
+const limitRequests = require('./limitRequest')
 const express = require('express');
 
 function exrest(schema) {
@@ -14,18 +13,9 @@ function exrest(schema) {
     return app;
 }
 
-const limitRequests = (req, res, next) => {
-    if (activeRequests >= MAX_CONCURRENT_REQUESTS) {
-        res.status(503).send('Server is busy. Please try again later.');
-        return;
-    }
 
-    activeRequests++;
-    res.on('finish', () => {
-        activeRequests--;
-    });
-
-    next();
+// Export both functions as properties of a single object
+module.exports = {
+    exrest,
+    limitRequests
 };
-
-module.exports = {exrest,limitRequests};

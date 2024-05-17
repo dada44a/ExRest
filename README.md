@@ -65,6 +65,7 @@ Contributions are welcome! If you encounter any bugs, have feature requests, or 
 
 ExRest is licensed under the MIT License.
 
+
 ### 1.0.2 Update
 - it is not a big update, its just a small update in which a request limiter middleware was added
 ```javascript

@@ -12,3 +12,6 @@ package-lock.json
 
 # Ignore macOS system files
 .DS_Store
+
+#ignore app.js
+app.js
