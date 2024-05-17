@@ -10,9 +10,6 @@ ExRest is a lightweight JavaScript package that simplifies the process of genera
 - **Customizable**: ExRest provides flexibility for customizing route behaviors, input validation, error handling, and more.
 - **Framework Agnostic**: While designed to work seamlessly with Express, ExRest can potentially be adapted for use with other Node.js web frameworks.
 
-##Requirement
-- Express
-- 
 ## Installation
 
 To install ExRest, simply run:
@@ -69,9 +66,5 @@ Contributions are welcome! If you encounter any bugs, have feature requests, or 
 ## License
 
 ExRest is licensed under the MIT License.
-
----
-
-Feel free to customize this README template further to suit your specific project needs and preferences.
 
 

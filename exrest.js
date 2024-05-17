@@ -14,4 +14,18 @@ function exrest(schema) {
     return app;
 }
 
-module.exports = exrest;
+const limitRequests = (req, res, next) => {
+    if (activeRequests >= MAX_CONCURRENT_REQUESTS) {
+        res.status(503).send('Server is busy. Please try again later.');
+        return;
+    }
+
+    activeRequests++;
+    res.on('finish', () => {
+        activeRequests--;
+    });
+
+    next();
+};
+
+module.exports = {exrest,limitRequests};
