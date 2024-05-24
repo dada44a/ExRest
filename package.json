@@ -1,12 +1,22 @@
 {
   "name": "exrest",
-  "version": "1.0.3",
+  "version": "1.0.31",
+  "type": "module",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/dada44a/ExRest"
   },
-  "license":"MIT",
+  "license": "MIT",
+  "author": "dada44a",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "eslint": "^9.3.0",
+    "globals": "^15.3.0",
+    "standard": "^17.1.0"
   }
 }

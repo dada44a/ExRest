@@ -69,22 +69,30 @@ ExRest is licensed under the MIT License.
 ### 1.0.2 Update
 - it is not a big update, its just a small update in which a request limiter middleware was added
 ```javascript
-    app.use(limitRequests);
+ const express = require('express');
+const { exrest, limitRequests } = require('exrest');
 
-    app.get('/', (req, res) => {
-        res.send('Hello world');
-    });
+const app = express();
 
-    app.get('/api/quotes', (req, res) => {
-        // Simulate a delay to mimic real-world processing time
-        setTimeout(() => {
-            res.json({ quotes: ['Quote 1', 'Quote 2', 'Quote 3'] });
-        }, 1000);
-    });
+// Define your schema
+const schema = {
+    endpoints: [
+        {
+            method: 'GET',
+            path: '/api/data',
+            controller: (req, res) => {
+                res.json({ message: 'Hello, world!' });
+            }
+        },
+        // Add more endpoints as needed
+    ]
+};
 
-    app.listen(PORT, () => {
-        console.log(`Server is running on port ${PORT}`);
-    });
+// Apply limitRequests middleware to /api routes
+app.use('/api/data', limitRequests({ maxConcurrentRequests: 5 }));
 
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
 
 ```

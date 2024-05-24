@@ -15,3 +15,6 @@ package-lock.json
 
 #ignore app.js
 app.js
+
+#igonore test
+test
